@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+       
+           
+
+    </script>
+</head>
+
+<body class="container-fluid" style="height: 1300px;">
+    <main
+        style="background-image:url(./image/netflix.jpg); background-size:cover; background-repeat:no reapet; height: 580px;">
+        <div class="header d-flex justify-content-between mt-3 rounded-4" style="background-color: rgba(19,18,18,0.5);">
+            <div class="text-danger ms-4 p-2"
+                style="font-variant: small-caps; text-shadow: 2px 2px 2px rgb(61, 60, 60);">
+                <h1>Netflix</h1>
+            </div>
+            <div class="btn mt-2">
+                <button data-bs-toggle="dropdown" class=" dropdown-toggle text-white bg-danger p-1 me-3 rounded"><span
+                        class="bi bi-globe"></span><span>Language</span></button>
+                <button data-bs-toggle="modal" data-bs-target="#faqs" class="text-white fw-bold  bg-danger p-1 rounded">
+                    sign in</button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item"><span class="dropdown-text">English</span></a></li>
+                    <li> <a href="#" class="dropdown-item"><span class="dropdown-text">Hindi</span></a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a href="#" class="dropdown-item bg-dark text-white">Help?</a></li>
+                </ul>
+                <div class="modal fade" id="faqs">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header bg-success text-white">
+                                <h3><span class="bi bi-person-fill"></span><span>User login</span></h3>
+                                <button data-bs-dismiss="modal" class="btn btn-close btn-dark"></button>
+                            </div>
+                            <div class="modal-body">
+                                <dt class="mb-2 fw-bold">Name</dt>
+                                <dd><input type="text" class="form-control"></dd>
+                                <dt class="mb-2 fw-bold">Password</dt>
+                                <dd><input type="password" class="form-control"></dd>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success text-white">Log in</button>
+                                <button data-bs-dismiss="modal" class="btn btn-danger text-white">Cancle</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 100px;" class="text-center text-white">
+            <h1 style="text-shadow: 2px 2px 2px gray; font-size: 50px;">Unlimited movies, TV shows and more</h1>
+            <p style="font-size: 25px; color: rgb(254, 247, 247);">Watch anywhere. Cancel anytime.</p>
+            <p style="font-size: 20px; color: rgb(254, 247, 247);">Ready to watch? Enter your email to create or restart
+                your membership.</p>
+            <input style="width: 400px; height: 50px; padding: 10px; margin-top: 10px;" type="text"
+                placeholder="Email Address"><button class="btn btn-danger p-2 ms-2 "
+                style="height: 50px; margin-top: -6px;  font-weight: bold; font-size: 20px;">Get started</button>
+        </div>
+        </main>
+        <div>
+
+        <div class="mt-3" id="btnContainer">
+            <button data-bs-toggle="modal" data-bs-target="#book" class="btn btn-danger">Quick Booking </button>
+        </div>
+        <div class="modal fade mt-2" id="book">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center bg-dark text-white fw-bold">
+                        <h1>Quick Booking And Enjoy Cinema</h1>
+
+                    </div>
+                    <div class="modal-body mt-3 d-flex justify-content-between">
+                        <div>
+                            <select class="form select">
+                                <optio>Select Movie</option>
+                                    <option>Marvel</option>
+                                    <option>Mission Imposibble</option>
+                                    <option>Aadipurush</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form select">
+                                <optio>Select Cinema</option>
+                                    <option>Gaytri</option>
+                                    <option>Lokendra</option>
+                                    <option>Arera-hills</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form select">
+                                <option>Select Date</option>
+                                <option>Today 27july</option>
+                                <option>28 july</option>
+                                <option>29 july</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form select">
+                                <option>Select Time</option>
+                                <option>10:30AM</option>
+                                <option>6:00PM</option>
+                                <option>9:30PM</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form select">
+                                <option>Select Seats</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button id="btnBook" data-bs-toggle="modalcontainer" data-bs-target="#summaryContainer" class="btn btn-success">Book</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modalcontainer fade w-25 bg-dark text-white" id="summaryContainer" style="display: none;">
+            <div class="modalcontainer-dialog modalcontainer-fullscreen">
+                <div class="modalcontainer-content">
+                    <div class="modalcontainer-header">
+                        <h2>Booking Summary</h2>
+                     </div>
+                     <div class="modalcontainer-body">
+                        <img width="200" height="200" border="1">
+                     </div>
+                     <div class="modalcontainer-footer">
+                       <dl class="row">
+                        <dt class="col-2">Movie</dt>
+                        <dd  id="lblMovie" class="col-10"></dd>
+                        <dt class="col-2">Cinema</dt>
+                        <dd id="lblCinema" class="col-10"></dd>
+                        <dt class="col-2">Date</dt>
+                        <dd id="lblDate" class="col-10"></dd>
+                        <dt class="col-2">Time</dt>
+                        <dd id="lblTime" class="col-10"></dd>
+                        <dt class="col-2">Seats</dt>
+                        <dd id="seats" class="col-10"></dd>
+                       </dl>
+                     </div>
+                     
+                </div>
+
+            </div>
+
+        </div>
+      
+    </div>
+    <section>
+
+        <div class="text-white d-flex justify-content-center"
+            style="background-color: black; background-size: cover; height: 400px;">
+            <div style="margin-right: 100px;margin-top: 70px;">
+                <div style="font-size: 30px; margin-bottom: 20px;">Enjoy on your TV</div>
+                <div style="font-size: 20px;">
+                    <p>Watch on smart TVs, PlayStation, <br>Xbox, Chromecast, Apple TV, <br>Blu-ray players and more.
+                    </p>
+                </div>
+            </div>
+            <div class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner" style="margin-top: 70px;">
+                    <div class="carousel-item">
+                        <img src="./image/aadipurush.webp" width="300" height="300" d-block>
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="./image/bhola.jpg" width="300" height="300" d-block>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./image/bhoot polic.jpg" width="300" height="300" d-block>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./image/ghayal.jpg" width="300" height="300" d-block>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <div class="card-body">
+        <h1 class="row py-3 justify-content-center">Frequently asked question</h1>
+        <div class="accordion" id="faqs">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">what is
+                        netflix?</button>
+                </div>
+                <div class="accordion-collapse collapse" id="q1" data-bs-parent="#faqs">
+                    <div class="accordion-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas excepturi voluptas temporibus
+                            tempore adipisci quaerat blanditiis esse quo et minus?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A est voluptate cumque soluta
+                            consectetur consequatur cum velit sunt quam nemo.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q2">How much does
+                        Netflix cost?</button>
+                </div>
+                <div class="accordion-collapse collapse" id="q2" data-bs-parent="#faqs">
+                    <div class="accordion-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas excepturi voluptas temporibus
+                            tempore adipisci quaerat blanditiis esse quo et minus?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A est voluptate cumque soluta
+                            consectetur consequatur cum velit sunt quam nemo.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q3">How much does
+                        Netflix cost?</button>
+                </div>
+                <div class="accordion-collapse collapse" id="q3" data-bs-parent="#faqs">
+                    <div class="accordion-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas excepturi voluptas temporibus
+                            tempore adipisci quaerat blanditiis esse quo et minus?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A est voluptate cumque soluta
+                            consectetur consequatur cum velit sunt quam nemo.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q4">what is
+                        netflix?</button>
+                </div>
+                <div class="accordion-collapse collapse" id="q4" data-bs-parent="#faqs">
+                    <div class="accordion-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas excepturi voluptas temporibus
+                            tempore adipisci quaerat blanditiis esse quo et minus?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A est voluptate cumque soluta
+                            consectetur consequatur cum velit sunt quam nemo.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer bg-dark text-white p-3 mt-3">
+        <h4>Questions? Call 000-800-919-1694</h4>
+        <div class="d-flex justify-content-evenly mt-2 p-3">
+
+            <div>
+                <div>FAQ</div>
+                <div>Media center</div>
+                <div>Cookie Preferences</div>
+                <div>Speed test</div>
+            </div>
+            <div>
+                <div>Help center</div>
+                <div>Investor Relations</div>
+                <div>Terms of use</div>
+                <div>Corporate Information</div>
+                <div>Legal Notices</div>
+            </div>
+            <div>
+                <div>Account</div>
+                <div>Job</div>
+                <div>Privacy</div>
+                <div>Contact Us</div>
+                <div>Only on Netflix</div>
+            </div>
+        </div>
+        <div class="dropend">
+            <button data-bs-toggle="dropdown" class="dropdown-toggle bg-dark text-white rounded"><span
+                    class="bo bi-globe"></span><span>Language</span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item"><span class="dropdown-text">English</span></a></li>
+                <li><a href="#" class="dropdown-item"><span class="dropdown-text">Hindi</span></a></li>
+
+            </ul>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
